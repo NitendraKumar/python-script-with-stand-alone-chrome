@@ -1,0 +1,39 @@
+#use root/example as user/password credentials
+version: '3.1'
+
+services:
+  chrome:
+    image: selenium/standalone-chrome
+    container_name: nitendra_chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      HUB_HOST: hub
+    ports:
+      - "5555:4444"
+    networks:
+      - nitendra.nitendradocker
+  my_test_crawler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nitendradocker:latest
+    container_name: nitendradocker
+    volumes:
+      - ./data:/myproject/data
+      - ./logs:/myproject/logs
+      - ./driver:/myproject/driver
+      - ./wait-for-it.sh:/myproject/wait-for-it.sh
+    depends_on:
+      - chrome
+
+    #command: ["./sc.sh"]
+    command: ["./wait-for-it.sh", "chrome:4444", "--", "python", "capturing.py"]
+    #command: ["python", "-u", "capturing.py"]
+    networks:
+      - nitendra.nitendradocker
+     
+networks:
+  nitendra.nitendradocker:
+    driver: bridge
+

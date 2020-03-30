@@ -1,1 +1,1 @@
-# python-script-with-stand-alone-chrome
+# Running Stand-alone-chrome docker container using docker compose 

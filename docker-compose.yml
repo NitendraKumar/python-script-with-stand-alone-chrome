@@ -28,7 +28,7 @@ services:
       - chrome
 
     #command: ["./sc.sh"]
-    command: ["./wait-for-it.sh", "chrome:4444", "--", "python", "capturing.py"]
+    command: ["./wait-for-it.sh", "chrome:4444", "--", "python", "python-script.py"]
     #command: ["python", "-u", "capturing.py"]
     networks:
       - nitendra.nitendradocker

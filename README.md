@@ -1,7 +1,7 @@
 # Running Stand-alone-chrome docker container using docker compose 
 
 
-* In this example we will learn following *
+### In this example we will learn following ### 
    - How to mount logs directory 
    - How to mount data directory 
    - How to run stand alone chrome container 

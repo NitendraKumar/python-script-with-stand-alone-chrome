@@ -17,3 +17,7 @@
 
 
 *Ok Let get your hand dirty with docker*
+
+- First File in this process is DockerFile 
+  -- Docker file contains all the instruction to build your docker-image
+  

@@ -18,6 +18,18 @@
 
 *Ok Let get your hand dirty with docker*
 
-- First File in this process is DockerFile 
-  -- Docker file contains all the instruction to build your docker-image
+* Asuming you have all the python script log/data directory inside working directory
+
+* First File in this process is DockerFile 
+  * Docker file contains all the instruction to build your docker-image
+  * All the instruction to copy all the files of application/python script goes here.
+  * See DockerFile in repository.
+* Second File docker-compose.yml
+  * This file containse how to build your image. 
+  * How to start container
+  * How to run link the container etc.
+  
+##Now Lets look into docker-compose.yml##
+
+
   

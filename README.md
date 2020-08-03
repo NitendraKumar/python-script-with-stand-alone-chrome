@@ -30,6 +30,9 @@
   * How to run link the container etc.
   
 ####Now Lets look into docker-compose.yml
+
+#### Copy File from docker container to host machine
+* docker cp <containerid>:/home/users.json /home/palanteert/
  
  
 
